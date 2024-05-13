@@ -1,0 +1,164 @@
+@import url('reset.css');
+
+/* Variables */
+:root {
+    --primary-color: black;
+    --secondary-color: whitesmoke;
+    --background-color: #D7EFC6;
+    --font-family: 'Arial', sans-serif;
+}
+
+/* Base Styles */
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--primary-color);
+}
+
+hr {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+input {
+  margin-top: 6px;
+  padding: 2px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+button {
+  padding: 8px 16px;
+  font-weight: 600;
+  border: none;
+  border-radius: 10px;
+}
+
+footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  padding: 16px;
+}
+
+/* Layout */
+.container {
+  width: 75%;
+  margin: 0 auto;
+}
+
+/* Utility Classes */
+#topLine {
+  margin-bottom: 8px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+#mainContent {
+  display: flex;
+  flex-direction: column;
+  width: 50%; /* Set the width of the element */
+  margin: 0 auto; /* Center the element horizontally */
+  margin-top: 32px;
+  height: 400px;
+  justify-content: start;
+}
+
+#formContent {
+  border: 1px solid black;
+  border-radius: 8px;
+  padding-bottom: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+}
+
+#inputForm {
+  height: 100%;
+}
+
+#inputContent {
+display: grid;
+grid-template-columns: 1fr;
+
+@media screen and (max-width: 600px) {
+    grid-template-columns: 1fr; /* One column for screens smaller than 600px */
+  }
+}
+
+.form-header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 8px;
+  @media screen and (max-width: 610px) {
+    flex-direction: column;
+    text-align: center;
+  }
+}
+
+.button-section {
+  display: flex;
+  align-items: center;
+  @media screen and (max-width: 610px) {
+    justify-content: space-evenly;
+  }
+}
+
+.button-section button {
+  margin: 0 4px;
+}
+
+.input-container {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.input-container * {
+  margin: 4px 8px;
+}
+
+.formSectionSeparator {
+  border: 1px solid rgba(0, 0, 0, 0.2);
+  width: 100%;
+}
+
+#submit {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 8px;
+}
+
+.form-input {
+  display: flex;
+  flex-direction: column;
+  padding: 8px
+}
+
+.hidden {
+  display: none;
+}
+
+#results {
+  margin: 16px;
+  padding: 16px;
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.2);
+}
+
+#submit button {
+  background-color: black;
+  color: white;
+}
+
+#addTeam1, #addTeam2 {
+  background-color: lightgreen;
+}
+#removeTeam1, #removeTeam2 {
+  background-color: lightcoral;
+}

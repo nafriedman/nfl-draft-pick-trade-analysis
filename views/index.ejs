@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NFL Draft Pick Trade Analyzer</title>
+  <link rel="stylesheet" href="/css/style.css">
+</head>
+<body>
+  <!-- Top Line Section -->
+  <div id="topLine" class="container">
+    <h1>NFL Draft Pick Trade Analyzer</h1>
+    <p>This tool evaluates trades involving 2024 NFL draft picks only! The draft pick value system used in the analysis currently is currently restricted to Fitzgerald-Spielberger. However, more draft value charts will be added in subsequent updates. </p>
+  </div>
+  <hr>
+  <!-- Main Content -->
+  <div id="mainContent">
+    <!-- Form -->
+    <div id="formContent">
+      <form action="analyze" method="post" id="inputForm">
+          <div id="inputContent">
+            <!-- Team 1 -->
+            <div id="first" class="form-input grid-item">
+              <div class="form-header">
+                <h4>Team 1 Picks to Trade</h4>
+                <div class="button-section">
+                  <button id="addTeam1" type="button"> Add</button>
+                  <button id="removeTeam1" type="button"> Remove</button>
+                </div>
+              </div>
+              <div class="input-container">
+                <input type="number" name="team1" class="t1_picks" min="1" max="362" value="1">
+              </div>
+            </div>
+            <hr class="formSectionSeparator">
+            <!-- Team 2 -->
+            <div id="second" class="form-input grid-item">
+              <div class="form-header">
+                <h4>Team 2 Picks to Trade</h4>
+                <div class="button-section">
+                  <button id="addTeam2" type="button"> Add</button>
+                  <button id="removeTeam2" type="button"> Remove</button>
+                </div>
+              </div>
+              <div class="input-container">
+              <input type="number" name="team2" class="t2_picks" min="1" max="362" value="2">
+              </div>
+            </div>
+            <hr class="formSectionSeparator">
+          </div>
+          <div id="submit">
+            <button type="submit" >Submit</button>
+          </div>
+        <!-- </div> -->
+      </form>
+    </div>
+    <!-- Results -->
+    <div id="results" class="hidden">
+    </div>
+  </div>
+  <div>
+    <footer>
+      Powered by Nadav Friedman
+    </footer>
+  </div>
+  <script src="/js/result.js"></script>
+</body>
+</html>
